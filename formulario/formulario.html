@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="js"></h1>
+        <h1>Formulário</h1>
+    </header>
+    <main>
+        <section class="form"> <!--Dados Pessoaiss-->
+            <form action=""> 
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome"> <br>
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" name="endereco" id="endereco"> <br>
+                    <label for="estado">Estado:</label>
+                    <select>
+                        <option value="sp">São Paulo</option>
+                    </select> <br>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="cidade" id="cidade"> 
+                </fieldset>
+            </form>
+        </section>
+        <section class="form"> <!--Dados Profissionais-->
+            <form action=""> 
+                <fieldset>
+                    <legend>Dados Profissionais</legend>
+                    <p>Natureza do Cargo</p>
+                    <input type="radio" name="cargo" id="gerencia">
+                    <label for="gerencia">Gerência</label>
+                    <input type="radio" name="cargo" id="financeiro">
+                    <label for="financeiro">Financeiro</label>
+                    <input type="radio" name="cargo" id="recepcao">
+                    <label for="recepcao">Recepção</label>
+                    <input type="radio" name="cargo" id="administrativo">
+                    <label for="administrativo">Administrativo</label> 
+
+                    <p>Descreva sobre você:</p>
+                    <textarea name="sobre" id="sobre" cols="20" rows="5"></textarea>
+                </fieldset>
+            </form>
+        </section>
+        <section class="enviar">
+            <button onClick="mudarNome()">Enviar</button>
+            <button>Limpar</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

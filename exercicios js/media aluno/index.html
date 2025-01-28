@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno</title>
+    <style>
+        button{
+            padding: 1rem;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Média do Aluno</h1>
+        <button onClick="calcular()">Calcular</button>
+        <p id="resultado"></p>
+        <p id="mensagem"></p>
+    </section>
+    <script>
+        function calcular(){
+            const nome = prompt("Digite o nome do aluno")
+            let n1 = prompt("Digite a primeira nota")
+            let n2 = prompt("Digite a segunda nota")
+            let areaResultado = document.getElementById("resultado")
+            let areaMensagem =  document.getElementById("mensagem")
+
+            
+            n1 = parseFloat(n1)
+            n2 = parseFloat(n2)
+
+            let media = (n1 + n2)/2
+            
+            if (isNaN(n1), isNaN(n2)){
+                areaResultado.textContent = ("Insira dados válidos.")
+            } else {
+                areaResultado.textContent = (`A média do aluno ${nome} é ${media}`)
+            }
+            
+            if (media < 7){
+                areaMensagem.textContent = (`Aluno ${nome} abaixo da média. Reprovado.`)
+                areaMensagem.style.color = "#eb4034"
+            } else if (media === 7){
+                areaMensagem.textContent = (`Aluno ${nome} na média. Aprovado.`)
+                areaMensagem.style.color = "#ebcc34"
+            } else {
+                areaMensagem.textContent = (`Aluno ${nome} acima da média. Aprovado.`)
+                areaMensagem.style.color = "#77eb34"
+            }
+        }
+    </script>
+</body>
+</html>
