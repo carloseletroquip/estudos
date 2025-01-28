@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <section>
+        <h1>Calculadora</h1>
+        <input type="number" id="n1">
+        <input type="number" id="n2"> <br> <br>
+        <textarea id="resultado"></textarea> <br>
+        <button onClick="calcular()">Calcular</button>
+    </section>
+    <script>
+
+    function calcular(){
+        let n1 = parseFloat(document.getElementById("n1").value)
+        let n2 = parseFloat(document.getElementById("n2").value)
+        let resultado = n1 + n2
+        let areaResultado = document.getElementById("resultado")
+
+        areaResultado.textContent = resultado
+    }
+
+    </script>
+</body>
+</html>
