@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O número é par ou é ímpar</title>
+    <style>
+        button{
+            padding: 1rem;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>É par ou é ímpar?</h1>
+        <button onClick="mensagem()">Clique para iniciar</button>
+        <p id="areaMensagem"></p>
+    </section>
+    <script>
+        function mensagem(){
+            let mensagem = document.getElementById("areaMensagem")
+            let n1 = prompt("Digite um número")
+            n1 = parseFloat(n1)
+            const resultado = n1/2
+
+            if (isNaN(n1)){
+                mensagem.textContent = "Inválido."
+            } else if (n1 % 2 === 0) {
+                mensagem.textContent = `O número ${n1} é par`
+            } else {
+                mensagem.textContent = `O número ${n1} é ímpar`
+            }
+        }
+    </script>
+</body>
+</html>
