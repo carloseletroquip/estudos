@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e hora</title>
+</head>
+<body>
+    <button onclick="analise()">Data e Hora</button>
+    <section id="areaMensagem">
+        
+    </section>
+    <script>
+        function analise(){
+            let areaMensagem = document.getElementById("areaMensagem")
+            let mensagem = document.createElement("p")
+
+            areaMensagem.appendChild(mensagem)
+
+            let agora = new Date
+            let dia = agora.getDate()
+            let ano = agora.getFullYear()
+
+            mensagem.textContent = dia
+            mensagem.textContent += ano     
+        }
+    </script>
+</body>
+</html>
